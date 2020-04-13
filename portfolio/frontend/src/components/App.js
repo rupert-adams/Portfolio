@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './layout/Header';
+import Landing from './landing/LandingPage';
 import Contact from './contact/Contact';
 import Projects from './projects/Projects';
 
@@ -15,8 +16,9 @@ class App extends Component {
                 <Fragment>
                     <Header />
                     <div className="container">
-                        <Contact />
-                        <Projects />
+                        <Landing />
+                        {/* <Contact /> */}
+                        {/* <Projects /> */}
                     </div>
                 </Fragment>
             </Provider>
