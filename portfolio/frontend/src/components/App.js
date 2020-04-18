@@ -14,7 +14,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <Fragment>
-                    <Header />
+                    {/*  <Header />  */}
                     <div className="container">
                         <Landing />
                         {/* <Contact /> */}

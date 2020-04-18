@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "hkgrotesk-med";
+    src: url("../../fonts/hkgrotesk-medium.woff") format('woff');
+}
+
+@font-face {
+    font-family: "hkgrotesk-light";
+    src: url("../../fonts/hkgrotesk-light.woff") format('woff');
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+body {
+    background: #273331;
+}
+
+.container {
+    background: #273331;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-text {
+    color: #D76345;
+
+    animation: fadein 6s;
+}
+
+h1 {
+    font-family: "hkgrotesk-med", Arial;
+    margin-bottom: -1rem;
+}
+
+h3 {
+    font-family: "hkgrotesk-light", Arial;
+}
+
+.landing-logo {
+    width:15rem;
+    height:15rem;
+
+    animation: fadein 2s;
+}
+
+.landing-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:15rem;
+    height:15rem;
+    border: none;
+    position: relative;
+    background: #273331;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99px;
+        height: 99px;
+        border-radius: 50%;
+        border: 2px solid pink;
+        filter: blur(0);
+        transform-origin: 50%;
+        z-index: -1;
+    }
+    &:hover {
+        &:before,
+        &:after{
+            border-color: transparent;
+            filter: blur(2px);
+            transform: scale(4);
+            transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+        }
+        &:after {
+            transition-delay: 100ms;
+        }
+    }
+}
+
+.landing-footer {
+    position:absolute;
+    margin-top: 20rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    animation: fadein 8s;
+}
+
+i {
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    color: #D76345;
+}
