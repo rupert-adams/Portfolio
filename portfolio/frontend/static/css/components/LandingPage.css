@@ -13,9 +13,26 @@
     to   { opacity: 1; }
 }
 
+@keyframes flash-1 {
+    0%, 100% { opacity: 0;}
+    50% { opacity: 1; }
+}
+
+@keyframes flash-2 {
+    0%, 100% { opacity: 0.25 }
+    50% { opacity: 0.5 }
+}
+
+@keyframes flash-3 {
+    0%, 100% { background: rgba(247,0,148,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);}
+    50% { background: rgba(247,0,148,$light-off-opacity);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,0.2);}
+}
 
 body {
     background: #273331;
+    overflow: hidden;
 }
 
 .container {
@@ -31,6 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 0;
 }
 
 .landing-text {
@@ -48,51 +66,102 @@ h3 {
     font-family: "hkgrotesk-light", Arial;
 }
 
+.landing-ring {
+    position: absolute;
+    z-index: 0;
+    width: 16rem;
+    height: 16rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: -3.5s;
+}
+
+.landing-ring-two {
+    position: absolute;
+    z-index: -1;
+    width: 26rem;
+    height: 26rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: -3s;
+}
+
+.landing-ring-three {
+    position: absolute;
+    z-index: -2;
+    width: 36rem;
+    height: 36rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: -2.5s;
+}
+
+.landing-ring-four {
+    position: absolute;
+    z-index: -3;
+    width: 46rem;
+    height: 46rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: -2s;
+}
+
+.landing-ring-five {
+    position: absolute;
+    z-index: -4;
+    width: 56rem;
+    height: 56rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: -1.5s;
+}
+
+.landing-ring-six {
+    position: absolute;
+    z-index: -5;
+    width: 66rem;
+    height: 66rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+     animation-iteration-count: infinite;
+     animation-delay: -1s;
+}
+
+.landing-ring-seven {
+    position: absolute;
+    z-index: -5;
+    width: 76rem;
+    height: 76rem;
+    padding-bottom: 7rem;
+
+    animation: flash-1;
+    animation-duration: 2s;
+     animation-iteration-count: infinite;
+     animation-delay: -0.5s;
+}
+
 .landing-logo {
     width:15rem;
     height:15rem;
 
     animation: fadein 2s;
-}
-
-.landing-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:15rem;
-    height:15rem;
-    border: none;
-    position: relative;
-    background: #273331;
-    border: none;
-    border-radius: 50%;
-    outline: none;
-    &:before,
-    &:after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 99px;
-        height: 99px;
-        border-radius: 50%;
-        border: 2px solid pink;
-        filter: blur(0);
-        transform-origin: 50%;
-        z-index: -1;
-    }
-    &:hover {
-        &:before,
-        &:after{
-            border-color: transparent;
-            filter: blur(2px);
-            transform: scale(4);
-            transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
-        }
-        &:after {
-            transition-delay: 100ms;
-        }
-    }
 }
 
 .landing-footer {

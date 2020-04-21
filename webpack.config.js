@@ -10,7 +10,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg)$/,
-                loader: 'file-loader?name=static/frontend/media/images/[name].[ext]'
+                loader: 'file-loader?name=../../static/frontend/media/images/[name].[ext]'
             }
         ]
     }
