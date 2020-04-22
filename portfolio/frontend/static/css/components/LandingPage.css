@@ -18,17 +18,6 @@
     50% { opacity: 1; }
 }
 
-@keyframes flash-2 {
-    0%, 100% { opacity: 0.25 }
-    50% { opacity: 0.5 }
-}
-
-@keyframes flash-3 {
-    0%, 100% { background: rgba(247,0,148,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);}
-    50% { background: rgba(247,0,148,$light-off-opacity);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,0.2);}
-}
 
 body {
     background: #273331;

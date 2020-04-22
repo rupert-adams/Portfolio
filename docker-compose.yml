@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: >
+      bash -c "npm run dev
+      && pipenv run portfolio/manage.py migrate
+      && pipenv run portfolio/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
