@@ -123,4 +123,7 @@ dmypy.json
 # React
 node_modules
 
+# Terraform
+terraform/
+
 # End of https://www.gitignore.io/api/django
